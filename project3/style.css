@@ -1,0 +1,45 @@
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto;
+    overflow: hidden; /* Hide slides that are out of bounds */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carousel-slides {
+    display: flex;
+}
+
+.slide {
+    min-width: 100%;
+    display: none; /* Hide all slides by default */
+}
+
+/* Show slide only if it has the active class */
+.slide.active {
+    display: block;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }

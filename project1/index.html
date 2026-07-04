@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SolBright Solar — Portfolio</title>
+	<meta name="description" content="SolBright Solar — sustainable solar energy solutions. Portfolio and services.">
+	<style>
+		:root{
+			--accent:#ffb703;
+			--dark:#0b1020;
+			--muted:#6b7280;
+			--bg:#f7f9fb;
+			--max-width:1100px;
+		}
+		*{box-sizing:border-box}
+		html,body{height:100%}
+		body{
+			margin:0;
+			font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+			color:var(--dark);
+			background:var(--bg);
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+		}
+		a{color:inherit;text-decoration:none}
+		header{
+			position:fixed;left:0;right:0;top:0;z-index:40;
+			display:flex;align-items:center;justify-content:space-between;
+			padding:18px 24px;backdrop-filter:blur(6px);
+		}
+		.nav-inner{max-width:var(--max-width);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+		.logo{font-weight:700;color:white;background:linear-gradient(90deg,var(--accent),#ff7b00);padding:6px 10px;border-radius:6px}
+		nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+		nav a{color:white;padding:8px 12px;border-radius:6px;font-weight:600}
+
+		/* HERO */
+		.hero{
+			min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:0 24px;
+			background-image:linear-gradient(rgba(5,8,20,0.45),rgba(5,8,20,0.45)), url('https://source.unsplash.com/1600x900/?solar,panel');
+			background-size:cover;background-position:center center;color:white;
+		}
+		.hero-inner{max-width:var(--max-width);margin:0 auto;padding:120px 0;display:flex;align-items:center;gap:40px}
+		.hero-content{max-width:640px}
+		.kicker{color:var(--accent);font-weight:700;margin-bottom:12px;letter-spacing:0.6px}
+		h1{font-size:clamp(28px,4.5vw,52px);margin:0 0 12px}
+		p.lead{color:rgba(255,255,255,0.9);line-height:1.5;margin:0 0 18px}
+		.cta{display:inline-block;background:var(--accent);color:var(--dark);padding:12px 18px;border-radius:8px;font-weight:700}
+
+		main{padding:48px 24px 80px}
+		.container{max-width:var(--max-width);margin:0 auto}
+
+		/* Sections */
+		section{padding:48px 0}
+		.grid{display:grid;gap:20px}
+		.services-grid{grid-template-columns:repeat(3,1fr)}
+		.card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(11,16,32,0.06)}
+		.card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+		.muted{color:var(--muted)}
+
+		/* Previous work */
+		.work-grid{grid-template-columns:repeat(3,1fr)}
+		.work-item{overflow:hidden;border-radius:10px}
+		.work-item img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .4s ease}
+		.work-item:hover img{transform:scale(1.05)}
+
+		/* Contact */
+		.contact{display:grid;grid-template-columns:1fr 360px;gap:28px}
+		.contact .contact-card{background:white;padding:20px;border-radius:10px}
+
+		footer{background:#071027;color:white;padding:36px 24px}
+		.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:24px;align-items:flex-start;justify-content:space-between}
+		.social a{display:inline-block;margin-right:10px;color:var(--accent)}
+
+		/* Responsive */
+		@media (max-width:900px){
+			.services-grid{grid-template-columns:repeat(2,1fr)}
+			.work-grid{grid-template-columns:repeat(2,1fr)}
+			.hero-inner{flex-direction:column;align-items:flex-start;padding-top:100px}
+			header{padding:12px 18px}
+		}
+		@media (max-width:640px){
+			nav ul{display:none}
+			.hero-inner{padding-top:90px}
+			.services-grid{grid-template-columns:1fr}
+			.work-grid{grid-template-columns:1fr}
+			.contact{grid-template-columns:1fr}
+			.hero{padding:40px 12px}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="nav-inner">
+			<div class="logo">SolBright</div>
+			<nav aria-label="Main Navigation">
+				<ul>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#work">Previous Work</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="hero" role="banner">
+		<div class="hero-inner">
+			<div class="hero-content">
+				<div class="kicker">Sustainable Energy</div>
+				<h1>Reliable solar installations for homes & businesses</h1>
+				<p class="lead">We design, install and maintain high-performance solar systems that cut costs and reduce carbon footprint. Trusted by local businesses and homeowners.</p>
+				<a class="cta" href="#contact">Get a Quote</a>
+			</div>
+			<div class="hero-media" aria-hidden="true">
+				<img src="image/solar.jpg">
+			</div>
+		</div>
+	</section>
+
+	<main>
+		<div class="container">
+			<section id="about">
+				<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+					<div style="flex:1;min-width:260px">
+						<h2>About SolBright</h2>
+						<p class="muted">We are a full-service solar company delivering turnkey photovoltaic systems, energy audits, and long-term maintenance. Our team focuses on quality, safety and measurable savings.</p>
+					</div>
+					<div style="width:320px;min-width:200px">
+						<img src="https://source.unsplash.com/640x360/?solar,team" alt="SolBright team" style="width:100%;border-radius:10px" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eef6%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%226b7280%22 font-family=%22Arial,%20sans-serif%22 font-size=%2220%22%3ESolar%20team%3C/text%3E%3C/svg%3E';">
+					</div>
+				</div>
+			</section>
+
+			<section id="services">
+				<h2>Services</h2>
+				<div class="grid services-grid">
+					<div class="card">
+						<img src="https://source.unsplash.com/800x600/?solar,panel" alt="Solar panels" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eef6%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%226b7280%22 font-family=%22Arial,%20sans-serif%22 font-size=%2220%22%3ESolar%20panels%3C/text%3E%3C/svg%3E';">
+						<h3>Residential Installations</h3>
+						<p class="muted">Custom rooftop systems sized to reduce monthly bills and increase property value.</p>
+					</div>
+					<div class="card">
+						<img src="https://source.unsplash.com/800x600/?solar,commercial" alt="Commercial solar" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eef6%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%226b7280%22 font-family=%22Arial,%20sans-serif%22 font-size=%2220%22%3ESolar%20product%3C/text%3E%3C/svg%3E';">
+						<h3>Commercial Systems</h3>
+						<p class="muted">Scalable solutions for businesses, warehouses and public facilities with financing options.</p>
+					</div>
+					<div class="card">
+						<img src="https://source.unsplash.com/800x600/?solar,commercial" alt="Commercial solar" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eef6%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%226b7280%22 font-family=%22Arial,%20sans-serif%22 font-size=%2220%22%3ESolar%20product%3C/text%3E%3C/svg%3E';">
+						<h3>Energy Storage & Monitoring</h3>
+						<p class="muted">Battery backup and system monitoring to maximize self-consumption and uptime.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="work">
+				<h2>Previous Work</h2>
+				<div class="grid work-grid">
+					  <div class="work-item"><img src="https://source.unsplash.com/800x600/?solar,roof" alt="Project 1" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eef6%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%226b7280%22 font-family=%22Arial,%20sans-serif%22 font-size=%2220%22%3EProject%201%3C/text%3E%3C/svg%3E';"></div>
+					  <div class="work-item"><img src="https://source.unsplash.com/800x600/?solar,field" alt="Project 2" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eef6%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%226b7280%22 font-family=%22Arial,%20sans-serif%22 font-size=%2220%22%3EProject%202%3C/text%3E%3C/svg%3E';"></div>
+					  <div class="work-item"><img src="https://source.unsplash.com/800x600/?solar,panel,installation" alt="Project 3" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eef6%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%226b7280%22 font-family=%22Arial,%20sans-serif%22 font-size=%2220%22%3EProject%203%3C/text%3E%3C/svg%3E';"></div>
+				</div>
+			</section>
+
+			<section id="contact">
+				<h2>Contact</h2>
+				<div class="contact">
+					<div class="contact-card card">
+						<h3>Get in touch</h3>
+						<p class="muted">Reach out for a free site assessment and quote.</p>
+						<p><strong>Phone:</strong> (555) 123-4567</p>
+						<p><strong>Email:</strong> hello@solbright.example</p>
+						<p><strong>Address:</strong> 123 Solar Ave, Sun City</p>
+					</div>
+					<div class="contact-card card">
+						<h3>Quick estimate</h3>
+						<form action="#" onsubmit="event.preventDefault();alert('Thank you — we will contact you!')">
+							<label style="display:block;margin-bottom:8px">Name<input required type="text" name="name" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #e6e9ef"></label>
+							<label style="display:block;margin-bottom:8px">Email<input required type="email" name="email" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #e6e9ef"></label>
+							<label style="display:block;margin-bottom:12px">Message<textarea name="msg" rows="4" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #e6e9ef"></textarea></label>
+							<button style="background:var(--accent);border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer">Send</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<footer>
+		<div class="footer-inner">
+			<div>
+				<div style="font-weight:700;font-size:18px">SolBright Solar</div>
+				<div class="muted" style="margin-top:8px">Delivering efficient solar solutions since 2012 — licensed & insured.</div>
+			</div>
+			<div style="text-align:right">
+				<div><strong>Contact</strong></div>
+				<div class="muted">(555) 123-4567 — hello@solbright.example</div>
+				<div style="margin-top:12px"><strong>Follow</strong></div>
+				<div class="social">
+					<a href="#" aria-label="Twitter">Twitter</a>
+					<a href="#" aria-label="LinkedIn">LinkedIn</a>
+					<a href="#" aria-label="Instagram">Instagram</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
